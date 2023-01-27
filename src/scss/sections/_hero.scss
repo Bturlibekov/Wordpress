@@ -6,7 +6,6 @@
   width: 100%;
   height: 800px;
   @include bg-cover();
-  background-image: url(../img/main-bg.jpg);
 }
 
 .hero__body {
