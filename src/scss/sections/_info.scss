@@ -1,0 +1,46 @@
+@import './base/vars';
+@import './base/mixins';
+
+.info {
+  width: 100%;
+  background: $mine;
+}
+
+.info__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  padding: 50px 0px;
+}
+
+.info__col {
+  width: 100%;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-item--span {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 150%;
+  color: $orange;
+}
+
+.info-item--strong {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 140%;
+  color: $white;
+}
+
+@media (max-width: 767px) {
+  .info__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}

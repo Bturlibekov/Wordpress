@@ -1,0 +1,24 @@
+@import './base/vars';
+@import './base/mixins';
+
+.partners {
+  width: 100%;
+}
+
+.partners-title {
+  margin-bottom: 50px;
+}
+
+.partners__slider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.partners__wrapper {
+  display: flex;
+}
+
+.partners-img {
+  position: relative;
+  text-align: center;
+}

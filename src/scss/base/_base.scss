@@ -1,0 +1,57 @@
+@import "./base/vars";
+@import "./base/mixins";
+
+body {
+    color: teal;
+    font-family: Manrope;
+
+    &.is-lock {
+        overflow: hidden;
+    }
+}
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    // display: grid;
+    // grid-template-rows: auto 1fr auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main__page {
+    width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.mxy {
+    margin: 100px 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .mxy {
+        margin: 80px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .mxy {
+        margin: 50px 0;
+    }
+}

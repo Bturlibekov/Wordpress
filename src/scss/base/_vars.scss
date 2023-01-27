@@ -1,0 +1,17 @@
+:root {
+  --color-white: #fff;
+  --color-green: #1fd867;
+  --color-orange: #ff4500;
+  --color-mine: #282828;
+  --color-blue: #4283ee;
+  --color-alabaster: #f8f8f8;
+  --btn-gradient: linear-gradient(180deg, #ff6b34 0%, #ff4500 100%);
+}
+
+$white: var(--color-white);
+$green: var(--color-green);
+$orange: var(--color-orange);
+$mine: var(--color-mine);
+$blue: var(--color-blue);
+$alabaster: var(--color-alabaster);
+$btn: var(--btn-gradient);
