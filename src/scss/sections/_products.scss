@@ -45,6 +45,14 @@
     background: linear-gradient(55deg, rgba(40, 40, 40, 1) 0%, rgba(40, 40, 40, 1) 30%, rgba(40, 40, 40, 0) 100%),
       linear-gradient(135deg, rgba(40, 40, 40, 1) 0%, rgba(40, 40, 40, 1) 30%, rgba(40, 40, 40, 0) 100%);
   }
+
+  &:nth-child(n + 9) {
+    display: none;
+  }
+
+  &.is-visible {
+    display: block;
+  }
 }
 
 .products__col-item {

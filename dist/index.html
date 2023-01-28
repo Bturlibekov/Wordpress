@@ -47,7 +47,7 @@
           <p class="header__call-text">
             <span class="header__call-text--circle"></span>Звоните. Пн-Сб 9:00-20:00
           </p>
-          <a class="header__call-link" href="tel:+998997774433">
+          <a class="header__call-link" href="tel:+998997774433" data-position="left" title="Позвонить">
             <svg class="icon-svg">
               <use xlink:href="img/svg/icons.svg#phone"></use>
             </svg>
@@ -71,53 +71,55 @@
   </div>
 </header>
     <main class="main__page">
-      <section class="hero" style="background-image: url(./img/main-bg.jpg);">
+      <section class="hero" id="first" style="background-image: url(./img/main-bg.jpg);">
   <div class="container">
     <div class="hero__body">
-      <h1 class="main-title">
-        Комплексное снабжение <span class="main-title--span">металлопрокатом</span>,<br>
-        по всей республике Узбекистан,
-        отгрузки со склада.
-      </h1>
-      <div class="hero__items">
-        <div class="hero__item">
-          <svg class="icon-svg">
-            <use xlink:href="img/svg/icons.svg#check"></use>
-          </svg>
-          <div class="hero__item-content">
-            <h2 class="hero__item-title">Широкий ассортимент продукции</h2>
-            <p class="hero__item-text">для разного вида запроса</p>
+      <div class="hero__block">
+        <h1 class="main-title">
+          Комплексное снабжение <span class="main-title--span">металлопрокатом</span>,<br>
+          по всей республике Узбекистан,
+          отгрузки со склада.
+        </h1>
+        <div class="hero__items">
+          <div class="hero__item">
+            <svg class="icon-svg">
+              <use xlink:href="img/svg/icons.svg#check"></use>
+            </svg>
+            <div class="hero__item-content">
+              <h2 class="hero__item-title">Широкий ассортимент продукции</h2>
+              <p class="hero__item-text">для разного вида запроса</p>
+            </div>
+          </div>
+          <div class="hero__item">
+            <svg class="icon-svg">
+              <use xlink:href="img/svg/icons.svg#check"></use>
+            </svg>
+            <div class="hero__item-content">
+              <h2 class="hero__item-title">Быстрая поставка продукции</h2>
+              <p class="hero__item-text">без задержек</p>
+            </div>
+          </div>
+          <div class="hero__item">
+            <svg class="icon-svg">
+              <use xlink:href="img/svg/icons.svg#check"></use>
+            </svg>
+            <div class="hero__item-content">
+              <h2 class="hero__item-title">Конкурентно способные цены,</h2>
+              <p class="hero__item-text">по дилерскому соглашению</p>
+            </div>
+          </div>
+          <div class="hero__item">
+            <svg class="icon-svg">
+              <use xlink:href="img/svg/icons.svg#check"></use>
+            </svg>
+            <div class="hero__item-content">
+              <h2 class="hero__item-title">На связи с вами,</h2>
+              <p class="hero__item-text">в течение недели</p>
+            </div>
           </div>
         </div>
-        <div class="hero__item">
-          <svg class="icon-svg">
-            <use xlink:href="img/svg/icons.svg#check"></use>
-          </svg>
-          <div class="hero__item-content">
-            <h2 class="hero__item-title">Быстрая поставка продукции</h2>
-            <p class="hero__item-text">без задержек</p>
-          </div>
-        </div>
-        <div class="hero__item">
-          <svg class="icon-svg">
-            <use xlink:href="img/svg/icons.svg#check"></use>
-          </svg>
-          <div class="hero__item-content">
-            <h2 class="hero__item-title">Конкурентно способные цены,</h2>
-            <p class="hero__item-text">по дилерскому соглашению</p>
-          </div>
-        </div>
-        <div class="hero__item">
-          <svg class="icon-svg">
-            <use xlink:href="img/svg/icons.svg#check"></use>
-          </svg>
-          <div class="hero__item-content">
-            <h2 class="hero__item-title">На связи с вами,</h2>
-            <p class="hero__item-text">в течение недели</p>
-          </div>
-        </div>
+        <button class="btn hero--btn">Ознакомиться с продукцией</button>
       </div>
-      <button class="btn hero--btn">Ознакомиться с продукцией</button>
     </div>
   </div>
 </section>
@@ -126,6 +128,41 @@
     <h2 class="products-title title">Наша продукция</h2>
     <div class="products__grid">
       <div class="products__col" style="background-image: url(../img/truby.jpg);">
+        <div class="products__col-item">
+          <h3 class="products__item-title">Сортовой прокат</h3>
+          <p class="products__item-text">Более 100 видов</p>
+          <button class="btn products--btn">Подробнее</button>
+        </div>
+      </div>
+      <div class="products__col">
+        <div class="products__col-item">
+          <h3 class="products__item-title">Сортовой прокат</h3>
+          <p class="products__item-text">Более 100 видов</p>
+          <button class="btn products--btn">Подробнее</button>
+        </div>
+      </div>
+      <div class="products__col">
+        <div class="products__col-item">
+          <h3 class="products__item-title">Сортовой прокат</h3>
+          <p class="products__item-text">Более 100 видов</p>
+          <button class="btn products--btn">Подробнее</button>
+        </div>
+      </div>
+      <div class="products__col">
+        <div class="products__col-item">
+          <h3 class="products__item-title">Сортовой прокат</h3>
+          <p class="products__item-text">Более 100 видов</p>
+          <button class="btn products--btn">Подробнее</button>
+        </div>
+      </div>
+      <div class="products__col">
+        <div class="products__col-item">
+          <h3 class="products__item-title">Сортовой прокат</h3>
+          <p class="products__item-text">Более 100 видов</p>
+          <button class="btn products--btn">Подробнее</button>
+        </div>
+      </div>
+      <div class="products__col">
         <div class="products__col-item">
           <h3 class="products__item-title">Сортовой прокат</h3>
           <p class="products__item-text">Более 100 видов</p>
@@ -248,10 +285,10 @@
     </div>
   </div>
 </div>
-      <div class="partners mxy">
+      <div class="partners suppliers mxy">
   <div class="container">
     <h2 class="partners-title title">Наши партнеры</h2>
-    <div class="partners__slider">
+    <div class="suppliers__slider">
       <div class="partners__wrapper swiper-wrapper">
         <div class="partners-img swiper-slide">
           <img src="img/svg/severstal-logo.svg" width="200" height="150" loading="lazy" alt="Bekabad">

@@ -4,7 +4,7 @@
 // import * as noUiSlider from 'nouislider'
 // import fslightbox from "fslightbox";
 // import { animOnScroll } from "./libs/animOnScroll.js"
-// import { headerFixed } from "./libs/fixed-header.js";
+import { headerFixed } from "./libs/fixed-header.js";
 // import { simpleBar } from "simplebar"; => data-simplebar должен быть у обьекта
 // import { select } from './libs/select.js';
 // import { lazyLoading } from './libs/lazy-loading.js';
@@ -19,7 +19,7 @@ Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
 
 // flsFunctions.isWebP()
 // animOnScroll()
-// headerFixed();
+headerFixed();
 // Accordion()
 // select();
 // lazyLoading();
@@ -47,10 +47,29 @@ const partners = new Swiper('.partners__slider', {
     1024: {
       slidesPerView: 6,
     }
-
-
   }
 });
+
+const suppliers = new Swiper('.suppliers__slider', {
+  loop: true,
+  autoplay: true,
+  speed: 1000,
+  spaceBetween: 15,
+  breakpoints: {
+    375: {
+      slidesPerView: 2,
+    },
+    540: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 6,
+    }
+  }
+})
 
 // Слайдер
 
@@ -75,3 +94,28 @@ window.addEventListener("click", (event) => {
 })
 
 // Бургер меню
+
+// Показать еще
+
+const showMore = document.querySelector('.products__more-btn');
+const productsLength = document.querySelectorAll('.products__col').length;
+
+let items = 8;
+
+if (productsLength <= 8) {
+  showMore.style.display = "none"
+}
+
+showMore.addEventListener('click', () => {
+  items += 4;
+  const array = Array.from(document.querySelector('.products__grid').children);
+  const visItems = array.slice(0, items);
+
+  visItems.forEach(el => el.classList.add('is-visible'));
+
+  if (visItems.length === productsLength) {
+    showMore.style.display = "none";
+  };
+});
+
+// Показать еще
