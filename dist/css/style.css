@@ -455,6 +455,11 @@ body.is-lock {
   padding: 10px 0px;
 }
 
+@media (max-width: 479px) {
+  .modal__container {
+    max-width: 350px;
+  }
+}
 /**
  * Swiper 8.4.6
  * Most modern mobile touch slider and framework with hardware accelerated transitions

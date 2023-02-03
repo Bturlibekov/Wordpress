@@ -152,3 +152,9 @@
 .btn--modal {
     padding: 10px 0px;
 }
+
+@media (max-width: 479px) {
+    .modal__container {
+        max-width: 350px;
+    }
+} 
