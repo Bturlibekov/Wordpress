@@ -4,16 +4,17 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 900px;
+  height: auto;
   @include bg-cover();
 }
 
 .hero__body {
-  padding: var(--header-height) 0 100px 0;
+  padding-top: var(--header-height);
+  padding-bottom: var(--header-height);
 }
 
 .hero__block {
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .main-title {
@@ -46,7 +47,7 @@
     width: 40px;
     height: 40px;
     margin-right: 20px;
-    fill: $orange;
+    fill: $green;
   }
 }
 
@@ -72,6 +73,16 @@
 
 .hero--btn {
   padding: 20px 50px;
+
+  &.navbar__link {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    text-transform: none;
+    &:hover {
+      color: $white;
+    }
+  }
 }
 
 @media (max-width: 767px) {

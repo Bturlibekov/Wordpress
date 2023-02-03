@@ -1,5 +1,5 @@
 // import * as flsFunctions from "./modules/functions.js"
-// import { Modal } from '../js/libs/modal.js'
+import { Modal } from '../js/libs/modal.js'
 // import { Accordion } from '../js/libs/accordion.js'
 // import * as noUiSlider from 'nouislider'
 // import fslightbox from "fslightbox";
@@ -30,7 +30,7 @@ getHeaderHeight();
 // Слайдер
 
 const partners = new Swiper('.partners__slider', {
-  loop: true,
+  // loop: true,
   autoplay: true,
   speed: 1000,
   spaceBetween: 15,
@@ -51,7 +51,7 @@ const partners = new Swiper('.partners__slider', {
 });
 
 const suppliers = new Swiper('.suppliers__slider', {
-  loop: true,
+  // loop: true,
   autoplay: true,
   speed: 1000,
   spaceBetween: 15,
@@ -119,3 +119,36 @@ showMore.addEventListener('click', () => {
 });
 
 // Показать еще
+
+
+// плавный скролл к элементу
+
+const navbarLinks = document.querySelectorAll('.navbar__link[data-scroll]');
+if (navbarLinks.length > 0) {
+  navbarLinks.forEach(navbarLink => {
+    navbarLink.addEventListener('click', onMenuLinkClick);
+  });
+
+  function onMenuLinkClick(event) {
+    const navbarLink = event.target;
+    if (navbarLink.dataset.scroll && document.querySelector(navbarLink.dataset.scroll)) {
+      const scrollBlock = document.querySelector(navbarLink.dataset.scroll);
+      const scrollBlockValue = scrollBlock.getBoundingClientRect().top + scrollY - document.querySelector('.header').offsetHeight;
+
+      window.scrollTo({
+        top: scrollBlockValue,
+        behavior: "smooth",
+      })
+      event.preventDefault();
+
+    }
+  }
+}
+
+// плавный скролл к элементу
+
+// Модальное окно
+
+const modal = new Modal('.modal__container', {})
+
+// Модальное окно

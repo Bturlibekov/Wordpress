@@ -1,3 +1,6 @@
+@import './base/vars';
+@import './base/mixins';
+
 .modal {
     --transition-time: 0.3s;
     position: fixed;
@@ -30,15 +33,16 @@
 }
 
 .modal__container {
-    max-width: 600px;
+    max-width: 420px;
     position: relative;
     display: none;
+    overflow: auto;
     vertical-align: middle;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
     cursor: default;
     text-align: left;
-    background-color: #fff;
+    background-color: $mine;
 
     &.modal-open {
         display: inline-block;
@@ -62,7 +66,7 @@
         height: 2px;
         display: block;
         transform: rotate(45deg);
-        background-color: #000;
+        background-color: $green;
     }
 
     &::after {
@@ -72,25 +76,29 @@
         height: 2px;
         display: block;
         transform: rotate(-45deg);
-        background-color: #000;
+        background-color: $green;
     }
 }
 
 .modal-content {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    color: $white;
 }
 
 .modal__title {
     font-size: 28px;
     font-weight: 700;
     line-height: 1.2em;
+    margin-bottom: 15px;
 }
 
 .modal__text {
     font-size: 18px;
     font-weight: 500;
     line-height: 1.2em;
+    margin-bottom: 30px;
 }
 
 .fade {
@@ -123,4 +131,24 @@
     opacity: 1;
     transform: translateY(0);
     transition: all var(--transition-time);
+}
+
+.modal__label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.modal__input {
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 10px;
+    padding: 10px 15px;
+    color: $mine;
+    background: $white;
+}
+
+.btn--modal {
+    padding: 10px 0px;
 }

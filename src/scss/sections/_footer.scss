@@ -14,56 +14,17 @@
     padding: 50px 0px;
 }
 
-.footer__list {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.footer__link-main {
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 140%;
-    transition: all 300ms ease 0s;
-    margin-bottom: 10px;
-    color: $white;
-
-    &:hover {
-        color: $orange;
-    }
-}
-
-.footer__item {
-    margin-bottom: 5px;
-
-    &:last-child {
-        margin-bottom: 0px;
-    }
-}
-
-.footer__link {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 140%;
-    transition: all 300ms ease 0s;
-    color: $white;
-
-    &:hover {
-        color: $orange;
-    }
-}
-
 .line {
     width: 100%;
     height: 2px;
-    background: $orange;
+    background: $green;
 }
 
 .footer__menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0px 50px 0px;
+    padding: 35px 0px 35px 0px;
 }
 
 .footer__navbar-list {
@@ -87,7 +48,7 @@
     color: $white;
 
     &:hover {
-        color: $orange;
+        color: $green;
     }
 }
 
@@ -112,7 +73,7 @@
             width: 100%;
             height: auto;
             display: block;
-            border-bottom: 2px dashed $orange;
+            border-bottom: 2px dashed $green;
         }
     }
 }
@@ -135,14 +96,32 @@
     font-weight: 700;
     line-height: 140%;
     margin: 5px 0px;
+    transition: all 300ms ease 0s;
     color: $white;
 
     .icon-svg {
         width: 22px;
         height: 22px;
         margin-right: 10px;
-        fill: $orange;
+        fill: $green;
     }
+    &:hover {
+        color: $green;
+    }
+}
+
+.footer__end {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0px;
+}
+
+.footer__end-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2em;
+    text-align: center;
+    color: $white;
 }
 
 @media (max-width: 1024px) {
@@ -180,6 +159,10 @@
         flex-direction: column;
         gap: 30px;
     }
+
+    .footer__end-text {
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -198,5 +181,9 @@
 
     .footer__navbar-link {
         font-size: 13px;
+    }
+
+    .footer__end-text {
+        font-size: 10px;
     }
 }
